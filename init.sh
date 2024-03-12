@@ -5,4 +5,4 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 helm repo update
 
 echo "---- Deploying KubePrometheusStack with specific values's file"
-helm install kps prometheus-community/kube-prometheus-stack --create-namespace monitoring
+helm install kps prometheus-community/kube-prometheus-stack --create-namespace  -n monitoring -f ./values-kps.yaml
